@@ -25,8 +25,7 @@ improve clinical communication.
 
 ## 1.2 Timeline
 
-- **First call for participation:** February 5th (Monday), 2024
-- **Release of training, validation, and public test datasets:** February 6th (Tuesday), 2024
+- **Release of training, validation, and public test datasets:** February 22nd (Tuesday), 2024
 - **Release of hidden test dataset:** April 12th (Friday), 2024
 - **System submission deadline:** May 10th (Friday), 2024
 - **System papers due date:** May 17th (Friday), 2024
@@ -48,15 +47,15 @@ Below are the data used for the challenge. Please note:
 
 | Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19(en) | CANDID-PTX | PadChest(en) | OpenI |
 |------------|-----------|----------|-------------------|------------|--------------|-------|
-| Findings   | 148253    | 45495    | 45580             |            | 101835       | 3261  |
-| Impression | 178073    | 181524   |                   | 17767      |              | 3631  |
+| Findings   | 148,253   | 45,495   | 45,580            |            | 101,835      | 3,261 |
+| Impression | 178,073   | 181,524  |                   | 17,767     |              | 3,631 |
 
 ### 2.2 Validation
 
 | Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19(en) | CANDID-PTX | PadChest(en) | OpenI |
 |------------|-----------|----------|-------------------|------------|--------------|-------|
-| Findings   | 3874      | 1108     | 1147              |            | 2558         | 76    |
-| Impression | 4600      | 4684     |                   | 464        |              | 89    |
+| Findings   | 3,874     | 1,108    | 1,147             |            | 2,558        | 76    |
+| Impression | 4,600     | 4,684    |                   | 464        |              | 89    |
 
 ### 2.3 Test
 
