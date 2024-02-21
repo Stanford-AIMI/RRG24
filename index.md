@@ -97,7 +97,7 @@ Also top participant will be evaluated against CheXagent [5]
     </td>
     <td style="border: none;" align="center">
       <img src="https://maya-varma.com/maya3.png" alt="Maya Varma" style="border-radius: 50%; width: 160px;"><br>
-      <a href="https://maya-varma.com/">Zhihong Chen</a>
+      <a href="https://maya-varma.com/">Maya Varma</a>
     </td>
     <td style="border: none;" align="center">
       <img src="https://aimi.stanford.edu/sites/g/files/sbiybj20451/files/styles/medium_square/public/media/image/curtis-langlotz_profilephoto_0.jpeg?h=b4e301e9&itok=AqV0_THq" alt="Curtis Langlotz" style="border-radius: 50%; width: 160px;"><br>
