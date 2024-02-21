@@ -4,67 +4,72 @@ layout: default
 
 # Shared task on Large-Scale Radiology Report Generation
 
-An important medical application of natural
-language generation (NLG) is to build assistive
-systems that take X-ray images of a patient and
-generate a textual report describing clinical observations in the images. This is 
-a clinically important task, offering
-the potential to
-reduce radiologists’ repetitive work and generally
-improve clinical communication.
+An important medical application of natural language generation (NLG) is to build assistive systems that take X-ray
+images of a patient and generate a textual report describing clinical observations in the images. This is a clinically
+important task, offering the potential to reduce radiologists’ repetitive work and generally improve clinical
+communication.
 
 ## 1. Task Overview
 
-
 ### 1.1 Rules
-> All participants will be invited to submit a paper describing their solution to be included in the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing (BioNLP) at ACL 2024](https://aclanthology.org/venues/bionlp/). If you do not wish to write a paper, you must at least provide a thorough description of your system which will be included in the overview paper for this task. Otherwise, your submission (and reported scores) will not be taken into account.
+
+> All participants will be invited to submit a paper describing their solution to be included in
+> the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing (BioNLP) at ACL 2024](https://aclanthology.org/venues/bionlp/). 
+> If you do not wish to write a paper, you must at least provide a thorough description of your system which will be
+> included in the overview paper for this task. Otherwise, your submission (and reported scores) will not be taken into
+> account.
 
 - Participants must agree to sign and follow the data access agreements for the provided dataset.
-- Participants may use private data to train (or pre-train) their systems, make a submission, and write a technical paper describing their solution. However, their score will not be counted towards the general leaderboard. In order to validate your leaderboard ranking, all the data used for the submission must be in some way available to other researchers.
-- If participants employ LLMs, generated data and the prompting strategies must be provided and described clearly so that results can be reproduced.
+- Participants may use private data to train (or pre-train) their systems, make a submission, and write a technical
+  paper describing their solution. However, their score will not be counted towards the general leaderboard. In order to
+  validate your leaderboard ranking, all the data used for the submission must be in some way available to other
+  researchers.
+- If participants employ LLMs, generated data and the prompting strategies must be provided and described clearly so
+  that results can be reproduced.
 
 ## 1.2 Timeline
 
-- **Release of training, validation, and public test datasets:** February 22nd (Tuesday), 2024
-- **Release of hidden test dataset:** April 12th (Friday), 2024
+- **Release of the training and validation datasets:** February 22nd (Tuesday), 2024
+- **Release of the public and hidden test dataset:** April 12th (Friday), 2024
 - **System submission deadline:** May 10th (Friday), 2024
 - **System papers due date:** May 17th (Friday), 2024
 - **Notification of acceptance:** June 17th (Monday), 2024
 - **Camera-ready system papers due:** July 1st (Monday), 2024
 - **BioNLP Workshop Date:** August 16th (Friday), 2024
 
-All deadlines are 11:59 PM ("Anywhere on Earth")
+All deadlines are 11:59 PM ("Anywhere on Earth").
 
 ## 2. Data
 
 Below are the data used for the challenge. Please note:
-- The dataset is not grouped per study
-- Mimic-cxr and chexpert official test-splits are unseen studies in training and validation
-- Padchest and BIMCV-COVID19 official language is Spanish. Reports have been translated using GPT4
 
+- The training and validation set are not grouped by study.
+- The studies in the test sets will be unseen studies.
+- The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated using GPT-4.
 
 ### 2.1 Training
 
-| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19(en) | CANDID-PTX | PadChest(en) | OpenI |
-|------------|-----------|----------|-------------------|------------|--------------|-------|
-| Findings   | 148,253   | 45,495   | 45,580            |            | 101,835      | 3,261 |
-| Impression | 178,073   | 181,524  |                   | 17,767     |              | 3,631 |
+| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI |
+|------------|-----------|----------|--------------------|------------|---------------|-------|
+| Findings   | 148,253   | 45,495   | 45,580             | -          | 101,835       | 3,261 |
+| Impression | 178,073   | 181,524  | -                  | 17,767     | -             | 3,631 |
 
 ### 2.2 Validation
 
-| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19(en) | CANDID-PTX | PadChest(en) | OpenI |
-|------------|-----------|----------|-------------------|------------|--------------|-------|
-| Findings   | 3,874     | 1,108    | 1,147             |            | 2,558        | 76    |
-| Impression | 4,600     | 4,684    |                   | 464        |              | 89    |
+| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI |
+|------------|-----------|----------|--------------------|------------|---------------|-------|
+| Findings   | 3,874     | 1,108    | 1,147              | -          | 2,558         | 76    |
+| Impression | 4,600     | 4,684    | -                  | 464        | -             | 89    |
 
 ### 2.3 Test
 
-Test-set will be provided at the end of the challenge
+The ground-truth of the test-set will be provided at the end of the challenge.
 
 ### 2.4 Access
 
-The full dataset (image and report pairs) can be access through 
-the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at the following url: TBA.
+The full dataset (image and report pairs) can be access through
+the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at the
+following url: TBA.
 
 ### 3. Metrics
 
@@ -80,7 +85,6 @@ Also top participant will be evaluated against CheXagent [5]
 
 # Organizers
 
-
 <table style="border-collapse: collapse; border: none;">
   <tr>
     <td style="border: none;" align="center">
@@ -88,8 +92,12 @@ Also top participant will be evaluated against CheXagent [5]
       <a href="https://jbdel.github.io/">Jean-Benoit Delbrouck</a>
     </td>
     <td style="border: none;" align="center">
-      <img src="https://pbs.twimg.com/profile_images/1732290523657076736/fixg-DOd_400x400.jpg" alt="Andrew Johnston" style="border-radius: 50%; width: 160px;"><br>
+      <img src="https://pbs.twimg.com/profile_images/1732290523657076736/fixg-DOd_400x400.jpg" alt="Zhihong Chen" style="border-radius: 50%; width: 160px;"><br>
       <a href="https://zhjohnchan.github.io/">Zhihong Chen</a>
+    </td>
+    <td style="border: none;" align="center">
+      <img src="https://maya-varma.com/maya3.png" alt="Maya Varma" style="border-radius: 50%; width: 160px;"><br>
+      <a href="https://maya-varma.com/">Zhihong Chen</a>
     </td>
     <td style="border: none;" align="center">
       <img src="https://aimi.stanford.edu/sites/g/files/sbiybj20451/files/styles/medium_square/public/media/image/curtis-langlotz_profilephoto_0.jpeg?h=b4e301e9&itok=AqV0_THq" alt="Curtis Langlotz" style="border-radius: 50%; width: 160px;"><br>
@@ -99,7 +107,9 @@ Also top participant will be evaluated against CheXagent [5]
 </table>
 
 # References
+
 [1]
+
 ```bib
 @inproceedings{zhang2019bertscore,
   title={BERTScore: Evaluating Text Generation with BERT},
@@ -108,7 +118,9 @@ Also top participant will be evaluated against CheXagent [5]
   year={2019}
 }
 ```
+
 [2]
+
 ```bib
 @inproceedings{papineni2002bleu,
   title={Bleu: a method for automatic evaluation of machine translation},
@@ -118,7 +130,9 @@ Also top participant will be evaluated against CheXagent [5]
   year={2002}
 }
 ```
+
 [3]
+
 ```bib
 @inproceedings{lin2004rouge,
   title={Rouge: A package for automatic evaluation of summaries},
@@ -128,7 +142,9 @@ Also top participant will be evaluated against CheXagent [5]
   year={2004}
 }
 ```
+
 [4]
+
 ```bib
 @inproceedings{delbrouck2022improving,
   title={Improving the Factual Correctness of Radiology Report Generation with Semantic Rewards},
@@ -138,7 +154,9 @@ Also top participant will be evaluated against CheXagent [5]
   year={2022}
 }
 ```
+
 [5]
+
 ```bib
 @article{chen2024chexagent,
   title={CheXagent: Towards a Foundation Model for Chest X-Ray Interpretation},
@@ -147,4 +165,3 @@ Also top participant will be evaluated against CheXagent [5]
   year={2024}
 }
 ```
-
