@@ -84,16 +84,16 @@ Also top participant will be evaluated against CheXagent [5]
 
 <table style="border-collapse: collapse; border: none;">
   <tr>
-    <td style="border: none;">
-      <img src="https://aimi.stanford.edu/sites/g/files/sbiybj20451/files/styles/medium_square/public/media/image/image5_0.png?h=f4e62a0a&itok=euaj9VoF" alt="JB Delbrouck" style="border-radius: 50%; width: 100px;"><br>
+    <td style="border: none;" align="center">
+      <img src="https://aimi.stanford.edu/sites/g/files/sbiybj20451/files/styles/medium_square/public/media/image/image5_0.png?h=f4e62a0a&itok=euaj9VoF" alt="JB Delbrouck" style="border-radius: 50%; width: 160px;"><br>
       <a href="https://jbdel.github.io/">Jean-Benoit Delbrouck</a>
     </td>
-    <td style="border: none;">
-      <img src="https://pbs.twimg.com/profile_images/1732290523657076736/fixg-DOd_400x400.jpg" alt="Andrew Johnston" style="border-radius: 50%; width: 100px;"><br>
-      <a href="https://zhjohnchan.github.io/">Andrew Johnston</a>
+    <td style="border: none;" align="center">
+      <img src="https://pbs.twimg.com/profile_images/1732290523657076736/fixg-DOd_400x400.jpg" alt="Andrew Johnston" style="border-radius: 50%; width: 160px;"><br>
+      <a href="https://zhjohnchan.github.io/">Zhihong Chen</a>
     </td>
-    <td style="border: none;">
-      <img src="https://aimi.stanford.edu/sites/g/files/sbiybj20451/files/styles/medium_square/public/media/image/curtis-langlotz_profilephoto_0.jpeg?h=b4e301e9&itok=AqV0_THq" alt="Curtis Langlotz" style="border-radius: 50%; width: 100px;"><br>
+    <td style="border: none;" align="center">
+      <img src="https://aimi.stanford.edu/sites/g/files/sbiybj20451/files/styles/medium_square/public/media/image/curtis-langlotz_profilephoto_0.jpeg?h=b4e301e9&itok=AqV0_THq" alt="Curtis Langlotz" style="border-radius: 50%; width: 160px;"><br>
       <a href="https://profiles.stanford.edu/curtis-langlotz">Curtis Langlotz</a>
     </td>
   </tr>
