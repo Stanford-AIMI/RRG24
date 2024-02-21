@@ -81,7 +81,7 @@ Participants submission will be automatically evaluated with the following metri
 - F1-RadGraph ([pypi package](https://pypi.org/project/radgraph/)) [4]
 - F1-CheXbert-XL
 
-Also top participant will be evaluated against CheXagent [5]
+Also top participant will be evaluated against CheXagent [5].
 
 # Organizers
 
