@@ -46,7 +46,7 @@ Below are the data used for the challenge. Please note:
 - The training and validation set are not grouped by study.
 - The studies in the test sets will be unseen studies.
 - The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated using GPT-4.
-- The information in the official validation and test sets of MIMIC-CXR and CheXpert is **strictly prohibited**,
+- Using the information in the official MIMIC-CXR and CheXpert validation and test sets is **strictly prohibited**,
   including their labels and reports.
 
 ### 2.1 Training
