@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Shared task on Large-Scale Radiology Report Generation
 
 An important medical application of natural language generation (NLG) is to build assistive systems that take X-ray
@@ -11,9 +7,9 @@ communication.
 
 ## 1. Task Overview
 
-Given one or multiple chest x-rays from one study, the participants must generate the corresponding radiology report.
+Given one or multiple chest X-rays from one study, the participants must generate the corresponding radiology report.
 
-In the scope of this task, two sections are considered: findings and impression. Each section will have their own separate evaluation and leaderboard. These sections may be produced using either a single system or two distinct systems.
+In the scope of this task, two sections are considered: findings and impressions. Each section will have its separate evaluation and leaderboard. These sections may be produced using either a single system or two distinct systems.
 
 ### 1.1 Rules
 
@@ -54,7 +50,7 @@ Below are the data used for the challenge. Please note:
 
 ### 2.1 Access
 
-The full dataset (image and report pairs) can be access through the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at the following url: [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr).
+The full dataset (image and report pairs) can be accessed through the 🤗 huggingface dataset at the following URL: [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr).
 
 ### 2.2 Training
 
@@ -72,7 +68,7 @@ The full dataset (image and report pairs) can be access through the <img src="ht
 
 ### 2.4 Test
 
-The ground-truth of the test-set will be provided at the end of the challenge.
+The ground truth of the test set will be provided at the end of the challenge.
 
 ### 3. Metrics
 
@@ -84,7 +80,7 @@ Participants submission will be automatically evaluated with the following metri
 - F1-RadGraph ([pypi package](https://pypi.org/project/radgraph/)) [4]
 - F1-CheXbert-XL
 
-Also top participant will be evaluated against CheXagent [5].
+Also, the top participants will be evaluated against CheXagent [5].
 
 # Organizers
 
@@ -168,3 +164,4 @@ Also top participant will be evaluated against CheXagent [5].
   year={2024}
 }
 ```
+
