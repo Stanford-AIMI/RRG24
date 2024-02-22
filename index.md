@@ -15,6 +15,10 @@ improve clinical communication.
 
 ## 1. Task Overview
 
+Given one or multiple chest x-rays from one study, the participants must generate the corresponding radiology report.
+
+In the scope of this task, two sections are considered: findings and impression. Each section will have their own separate evaluation and leaderboard. These sections may be produced using either a single system or two distinct systems.
+
 
 ### 1.1 Rules
 > All participants will be invited to submit a paper describing their solution to be included in the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing (BioNLP) at ACL 2024](https://aclanthology.org/venues/bionlp/). If you do not wish to write a paper, you must at least provide a thorough description of your system which will be included in the overview paper for this task. Otherwise, your submission (and reported scores) will not be taken into account.
@@ -64,7 +68,7 @@ Test-set will be provided at the end of the challenge
 ### 2.4 Access
 
 The full dataset (image and report pairs) can be access through 
-the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at the following url: TBA.
+the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at the following url: [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr).
 
 ### 3. Metrics
 
