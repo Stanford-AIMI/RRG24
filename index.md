@@ -14,7 +14,7 @@ communication.
 ### 1.1 Rules
 
 > All participants will be invited to submit a paper describing their solution to be included in
-> the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing (BioNLP) at ACL 2024](https://aclanthology.org/venues/bionlp/). 
+> the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing (BioNLP) at ACL 2024](https://aclanthology.org/venues/bionlp/).
 > If you do not wish to write a paper, you must at least provide a thorough description of your system which will be
 > included in the overview paper for this task. Otherwise, your submission (and reported scores) will not be taken into
 > account.
@@ -46,20 +46,22 @@ Below are the data used for the challenge. Please note:
 - The training and validation set are not grouped by study.
 - The studies in the test sets will be unseen studies.
 - The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated using GPT-4.
+- The information in the official validation and test sets of MIMIC-CXR and CheXpert is **strictly prohibited**,
+  including their labels and reports.
 
 ### 2.1 Training
 
-| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI |
-|------------|-----------|----------|--------------------|------------|---------------|-------|
-| Findings   | 148,253   | 45,495   | 45,580             | -          | 101,835       | 3,261 |
-| Impression | 178,073   | 181,524  | -                  | 17,767     | -             | 3,631 |
+| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI | Total   |
+|------------|-----------|----------|--------------------|------------|---------------|-------|---------|
+| Findings   | 148,253   | 45,495   | 45,580             | -          | 101,835       | 3,261 | 344,424 |
+| Impression | 178,073   | 181,524  | -                  | 17,767     | -             | 3,631 | 380,995 |
 
 ### 2.2 Validation
 
-| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI |
-|------------|-----------|----------|--------------------|------------|---------------|-------|
-| Findings   | 3,874     | 1,108    | 1,147              | -          | 2,558         | 76    |
-| Impression | 4,600     | 4,684    | -                  | 464        | -             | 89    |
+| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI | Total |
+|------------|-----------|----------|--------------------|------------|---------------|-------|-------|
+| Findings   | 3,874     | 1,108    | 1,147              | -          | 2,558         | 76    | 8,763 |
+| Impression | 4,600     | 4,684    | -                  | 464        | -             | 89    | 9,837 |
 
 ### 2.3 Test
 
