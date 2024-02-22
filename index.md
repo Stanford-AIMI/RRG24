@@ -52,28 +52,27 @@ Below are the data used for the challenge. Please note:
 - The training and validation set are not grouped by subjects.
 - The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated using GPT-4.
 
-### 2.1 Training
+### 2.1 Access
+
+The full dataset (image and report pairs) can be access through the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at the following url: [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr).
+
+### 2.2 Training
 
 | Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI | Total   |
 |------------|-----------|----------|--------------------|------------|---------------|-------|---------|
 | Findings   | 148,253   | 45,495   | 45,580             | -          | 101,835       | 3,261 | 344,424 |
 | Impression | 178,073   | 181,524  | -                  | 17,767     | -             | 3,631 | 380,995 |
 
-### 2.2 Validation
+### 2.3 Validation
 
 | Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI | Total |
 |------------|-----------|----------|--------------------|------------|---------------|-------|-------|
 | Findings   | 3,874     | 1,108    | 1,147              | -          | 2,558         | 76    | 8,763 |
 | Impression | 4,600     | 4,684    | -                  | 464        | -             | 89    | 9,837 |
 
-### 2.3 Test
+### 2.4 Test
 
 The ground-truth of the test-set will be provided at the end of the challenge.
-
-### 2.4 Access
-
-The full dataset (image and report pairs) can be access through 
-the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at the following url: [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr).
 
 ### 3. Metrics
 
