@@ -30,6 +30,8 @@ In the scope of this task, two sections are considered: findings and impression.
   researchers.
 - If participants employ LLMs, generated data and the prompting strategies must be provided and described clearly so
   that results can be reproduced.
+- Using the information in the official MIMIC-CXR and CheXpert validation and test sets is **strictly prohibited**,
+  including their labels and reports.
 
 ## 1.2 Timeline
 
@@ -47,11 +49,8 @@ All deadlines are 11:59 PM ("Anywhere on Earth").
 
 Below are the data used for the challenge. Please note:
 
-- The training and validation set are not grouped by study.
-- The studies in the test sets will be unseen studies.
+- The training and validation set are not grouped by subjects.
 - The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated using GPT-4.
-- Using the information in the official MIMIC-CXR and CheXpert validation and test sets is **strictly prohibited**,
-  including their labels and reports.
 
 ### 2.1 Training
 
