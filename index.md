@@ -13,12 +13,15 @@ communication.
 
 Given one or multiple chest x-rays from one study, the participants must generate the corresponding radiology report.
 
-In the scope of this task, two sections are considered: findings and impression. Each section will have their own separate evaluation and leaderboard. These sections may be produced using either a single system or two distinct systems.
+In the scope of this task, two sections are considered: findings and impression. Each section will have their own
+separate evaluation and leaderboard. These sections may be produced using either a single system or two distinct
+systems.
 
 ### 1.1 Rules
 
 > All participants will be invited to submit a paper describing their solution to be included in
-> the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing (BioNLP) at ACL 2024](https://aclanthology.org/venues/bionlp/).
+>
+the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing (BioNLP) at ACL 2024](https://aclanthology.org/venues/bionlp/).
 > If you do not wish to write a paper, you must at least provide a thorough description of your system which will be
 > included in the overview paper for this task. Otherwise, your submission (and reported scores) will not be taken into
 > account.
@@ -49,23 +52,32 @@ Below are the data used for the challenge. Please note:
 
 - The training and validation set are not grouped by study.
 - The studies in the test sets will be unseen studies.
-- The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated using GPT-4.
-- Using the information in the official MIMIC-CXR and CheXpert validation and test sets is **strictly prohibited**,
-  including their labels and reports.
+- The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated to English
+  using GPT-4.
+- <span style="color: red;">Using the information in the official MIMIC-CXR and CheXpert validation and test sets is *
+  *strictly prohibited**, including their labels and reports.</span>
 
 ### 2.1 Training
 
-| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI | Total   |
-|------------|-----------|----------|--------------------|------------|---------------|-------|---------|
-| Findings   | 148,253   | 45,495   | 45,580             | -          | 101,835       | 3,261 | 344,424 |
-| Impression | 178,073   | 181,524  | -                  | 17,767     | -             | 3,631 | 380,995 |
+| Dataset       | Findings Count | Impressions Count |
+|---------------|----------------|-------------------|
+| PadChest      | 101,752        | -                 |
+| BIMCV-COVID19 | 45,525         | -                 |
+| CheXpert      | 45,491         | 181,619           |
+| OpenI         | 3,252          | 3,628             |
+| MIMIC-CXR     | 148,374        | 181,166           |
+| **Total**     | **344,394**    | **366,413**       |
 
 ### 2.2 Validation
 
-| Category   | MIMIC-CXR | CheXpert | BIMCV-COVID19 (en) | CANDID-PTX | PadChest (en) | OpenI | Total |
-|------------|-----------|----------|--------------------|------------|---------------|-------|-------|
-| Findings   | 3,874     | 1,108    | 1,147              | -          | 2,558         | 76    | 8,763 |
-| Impression | 4,600     | 4,684    | -                  | 464        | -             | 89    | 9,837 |
+| Dataset       | Findings Count | Impressions Count |
+|---------------|----------------|-------------------|
+| CheXpert      | 1,112          | 4,589             |
+| BIMCV-COVID19 | 1,202          | -                 |
+| PadChest      | 2,641          | -                 |
+| OpenI         | 85             | 92                |
+| MIMIC-CXR     | 3,799          | 4,650             |
+| **Total**     | **8,839**      | **9,331**         |
 
 ### 2.3 Test
 
@@ -73,18 +85,82 @@ The ground-truth of the test-set will be provided at the end of the challenge.
 
 ### 2.4 Access
 
-The full dataset (image and report pairs) can be access through 
-the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at the following url: [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr).
+Here are the steps to access the dataset of this challenge with the correct splits:
+
+1) The datasets (image and report pairs) of CheXpert, BIMCV-COVID19 (en), PadChest (en) and OpenI can be access through
+   the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at
+   the
+   following
+   url: [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-public](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-public).
+   Once you have been granted access, you can invoke the dataset using the following:
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("StanfordAIMI/interpret-cxr-public")
+```
+
+2) You need to process MIMIC-CXR yourself
+   using [the following scripts](https://storage.googleapis.com/misc_jb/make-interpret-mimic-cxr.py). This script must
+   be used
+   because it will defined the correct splits. Please have the following structure:
+
+```bash
+.
+├── files
+│   ├── p10
+│   ├── p11
+│   ├── ...
+│   └── p19
+├── make-interpret-mimic-cxr.py
+├── mimic-cxr-2.0.0-metadata.csv
+├── mimic-cxr-2.0.0-split.csv
+└── mimic_cxr_sectioned.csv
+```
+
+You can then collate both dataset as such (still in the same folder)
+
+```python
+from datasets import load_dataset, Sequence, Image, DatasetDict, concatenate_datasets
+
+dataset = load_dataset("StanfordAIMI/interpret-cxr-public")
+dataset_mimic = load_dataset(
+    "json",
+    data_files={"train": "train_mimic.json", "validation": "val_mimic.json"},
+).cast_column("images", Sequence(Image()))
+dataset_final = DatasetDict({"train": concatenate_datasets([dataset["train"], dataset_mimic["train"]]),
+                             "validation": concatenate_datasets([dataset["validation"], dataset_mimic["validation"]])})
+dataset_final.save_to_disk("path/to/dataset/directory")
+```
+
+The final dataset should be a such:
+
+```bash
+DatasetDict({
+    train: Dataset({
+        features: ['source', 'findings', 'images', 'impression', 'images_path'],
+        num_rows: 550395
+    })
+    validation: Dataset({
+        features: ['source', 'findings', 'images', 'impression', 'images_path'],
+        num_rows: 14111
+    })
+})
+```
+
+3) One more dataset, VinDr-CXR, can be used as training data if you wish, but we do not process on our end. You will
+   need to do it
+   yourself at [https://vindr.ai/datasets/cxr](https://vindr.ai/datasets/cxr).
 
 ### 3. Metrics
 
 Participants submission will be automatically evaluated with the following metric:
 
-- Bertscore [1]
+- [Bertscore](https://github.com/jbdel/vilmedic/blob/main/vilmedic/blocks/scorers/NLG/bertscore/bertscore.py) [1]
 - BLEU [2]
 - ROUGEL [3]
-- F1-RadGraph ([pypi package](https://pypi.org/project/radgraph/)) [4]
-- F1-CheXbert-XL
+- [F1-RadGraph](https://github.com/jbdel/vilmedic/blob/main/vilmedic/blocks/scorers/scores.py#L103) ([pypi package](https://pypi.org/project/radgraph/)) [4]
+- [F1-CheXbert](https://github.com/jbdel/vilmedic/blob/main/vilmedic/blocks/scorers/scores.py#L90) ([pypi package](https://pypi.org/project/f1chexbert/))
 
 Also top participant will be evaluated against CheXagent [5].
 
