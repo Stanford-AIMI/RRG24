@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Shared task on Large-Scale Radiology Report Generation
 
 An important medical application of natural language generation (NLG) is to build assistive systems that take X-ray
@@ -11,11 +7,9 @@ communication.
 
 ## 1. Task Overview
 
-Given one or multiple chest x-rays from one study, the participants must generate the corresponding radiology report.
-
-In the scope of this task, two sections are considered: findings and impression. Each section will have their own
-separate evaluation and leaderboard. These sections may be produced using either a single system or two distinct
-systems.
+Given one or multiple chest X-rays from one study, the participants must generate the corresponding radiology report.
+In the scope of this task, two sections are considered: findings and impressions. Each section will have its separate
+evaluation and leaderboard. These sections may be produced using either a single system or two distinct systems.
 
 ### 1.1 Rules
 
@@ -33,6 +27,8 @@ the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing 
   researchers.
 - If participants employ LLMs, generated data and the prompting strategies must be provided and described clearly so
   that results can be reproduced.
+- Using the information in the official MIMIC-CXR and CheXpert validation and test sets is **strictly prohibited**,
+  including their labels and reports.
 
 ## 1.2 Timeline
 
@@ -52,8 +48,8 @@ Below are the data used for the challenge. Please note:
 
 - The training and validation set are not grouped by study.
 - The studies in the test sets will be unseen studies.
-- The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated to English
-  using GPT-4.
+- The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated using GPT-4.
+- The training and validation set are grouped by study, but **not** grouped by subjects.
 - <span style="color: red;">Using the information in the official MIMIC-CXR and CheXpert validation and test sets is *
   *strictly prohibited**, including their labels and reports.</span>
 
@@ -81,13 +77,15 @@ Below are the data used for the challenge. Please note:
 
 ### 2.3 Test
 
-The ground-truth of the test-set will be provided at the end of the challenge.
+The ground-truth of the test-set will be provided at the end of the challenge. There will be one test-set for
+impressions, and one test-set for findings.
 
 ### 2.4 Access
 
 Here are the steps to access the dataset of this challenge with the correct splits:
 
-1) The datasets (image and report pairs) of CheXpert, BIMCV-COVID19 (en), PadChest (en) and OpenI can be access through
+1) The datasets (image and findings/impression pairs) of CheXpert, BIMCV-COVID19 (en), PadChest (en) and OpenI can be
+   access through
    the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at
    the
    following
@@ -100,10 +98,11 @@ from datasets import load_dataset
 dataset = load_dataset("StanfordAIMI/interpret-cxr-public")
 ```
 
-2) You need to process MIMIC-CXR yourself
-   using [the following scripts](https://storage.googleapis.com/misc_jb/make-interpret-mimic-cxr.py). This script must
-   be used
-   because it will defined the correct splits. Please have the following structure:
+2) You'll have to handle the MIMIC-CXR processing on your own by
+   utilizing the [make-interpret-mimic-cxr.py](https://storage.googleapis.com/misc_jb/make-interpret-mimic-cxr.py)
+   script.
+   It's crucial to use this script as it ensures the proper splits are defined. Please have the following structure
+   ready:
 
 ```bash
 .
@@ -118,7 +117,7 @@ dataset = load_dataset("StanfordAIMI/interpret-cxr-public")
 └── mimic_cxr_sectioned.csv
 ```
 
-You can then collate both dataset as such (still in the same folder)
+And run `python make-interpret-mimic-cxr.py`. Then, you can then collate both dataset as such:
 
 ```python
 from datasets import load_dataset, Sequence, Image, DatasetDict, concatenate_datasets
@@ -133,7 +132,7 @@ dataset_final = DatasetDict({"train": concatenate_datasets([dataset["train"], da
 dataset_final.save_to_disk("path/to/dataset/directory")
 ```
 
-The final dataset should be a such:
+The final dataset should be as detailed below:
 
 ```bash
 DatasetDict({
@@ -154,7 +153,7 @@ DatasetDict({
 
 ### 3. Metrics
 
-Participants submission will be automatically evaluated with the following metric:
+The submissions will be automatically evaluated with the following metrics:
 
 - [Bertscore](https://github.com/jbdel/vilmedic/blob/main/vilmedic/blocks/scorers/NLG/bertscore/bertscore.py) [1]
 - BLEU [2]
@@ -162,7 +161,7 @@ Participants submission will be automatically evaluated with the following metri
 - [F1-RadGraph](https://github.com/jbdel/vilmedic/blob/main/vilmedic/blocks/scorers/scores.py#L103) ([pypi package](https://pypi.org/project/radgraph/)) [4]
 - [F1-CheXbert](https://github.com/jbdel/vilmedic/blob/main/vilmedic/blocks/scorers/scores.py#L90) ([pypi package](https://pypi.org/project/f1chexbert/))
 
-Also top participant will be evaluated against CheXagent [5].
+Also, the top participants will be evaluated against CheXagent [5].
 
 # Organizers
 
@@ -246,3 +245,4 @@ Also top participant will be evaluated against CheXagent [5].
   year={2024}
 }
 ```
+
