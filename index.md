@@ -8,7 +8,7 @@ communication.
 ## 1. Task Overview
 
 Given one or multiple chest X-rays from one study, the participants must generate the corresponding radiology report.
-In the scope of this task, two sections are considered: findings and impressions. Each section will have its separate
+In the scope of this task, two sections are considered: findings and impressions. Each section will have its own separate
 evaluation and leaderboard. These sections may be produced using either a single system or two distinct systems.
 
 ### 1.1 Rules
@@ -27,8 +27,8 @@ the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing 
   researchers.
 - If participants employ LLMs, generated data and the prompting strategies must be provided and described clearly so
   that results can be reproduced.
-- Using the information in the official MIMIC-CXR and CheXpert validation and test sets is **strictly prohibited**,
-  including their labels and reports.
+- <span style="color: red;">Using the information in the official MIMIC-CXR and CheXpert validation and test sets is *
+  <b>strictly prohibited</b>, including their labels and reports.</span>
 
 ## 1.2 Timeline
 
@@ -46,12 +46,11 @@ All deadlines are 11:59 PM ("Anywhere on Earth").
 
 Below are the data used for the challenge. Please note:
 
-- The training and validation set are not grouped by study.
+- The training and validation sets are grouped by study, but **not** grouped by subjects.
 - The studies in the test sets will be unseen studies.
 - The official language of PadChest and BIMCV-COVID19 is Spanish, where their reports have been translated using GPT-4.
-- The training and validation set are grouped by study, but **not** grouped by subjects.
 - <span style="color: red;">Using the information in the official MIMIC-CXR and CheXpert validation and test sets is *
-  *strictly prohibited**, including their labels and reports.</span>
+  <b>strictly prohibited</b>, including their labels and reports.</span>
 
 ### 2.1 Training
 
@@ -117,7 +116,7 @@ dataset = load_dataset("StanfordAIMI/interpret-cxr-public")
 └── mimic_cxr_sectioned.csv
 ```
 
-And run `python make-interpret-mimic-cxr.py`. Then, you can then collate both dataset as such:
+And run `python make-interpret-mimic-cxr.py`. Then, you can then collate both datasets as such:
 
 ```python
 from datasets import load_dataset, Sequence, Image, DatasetDict, concatenate_datasets
