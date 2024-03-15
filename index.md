@@ -101,7 +101,7 @@ dataset = load_dataset("StanfordAIMI/interpret-cxr-public")
    utilizing the [make-interpret-mimic-cxr.py](https://storage.googleapis.com/misc_jb/make-interpret-mimic-cxr.py)
    script.
    It's crucial to use this script as it ensures the proper splits are defined. Please have the following structure
-   ready:
+   ready (files folder is from [mimic-cxr-jpg](https://physionet.org/content/mimic-cxr-jpg/2.0.0/)):
 
 ```bash
 .
@@ -116,7 +116,10 @@ dataset = load_dataset("StanfordAIMI/interpret-cxr-public")
 └── mimic_cxr_sectioned.csv
 ```
 
-And run `python make-interpret-mimic-cxr.py`. Then, you can then collate both datasets as such:
+And run `python make-interpret-mimic-cxr.py`. If you have a hash error (i.e. 
+the created files arent what was expected), please email me at jbdel at stanford dot edu.<br/>
+
+Then, you can then collate both datasets as such:
 
 ```python
 from datasets import load_dataset, Sequence, Image, DatasetDict, concatenate_datasets
@@ -130,6 +133,10 @@ dataset_final = DatasetDict({"train": concatenate_datasets([dataset["train"], da
                              "validation": concatenate_datasets([dataset["validation"], dataset_mimic["validation"]])})
 dataset_final.save_to_disk("path/to/dataset/directory")
 ```
+Please note that the save_to_dict operation can take time:<br/>
+`
+Saving the dataset (147/147 shards): 100%|██████████| 550395/550395 [7:28:42<00:00, 20.44 examples/s]
+`
 
 The final dataset should be as detailed below:
 
