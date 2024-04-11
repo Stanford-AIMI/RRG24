@@ -98,7 +98,7 @@ dataset = load_dataset("StanfordAIMI/interpret-cxr-public")
 ```
 
 2) You'll have to handle the MIMIC-CXR processing on your own by
-   utilizing the [make-interpret-mimic-cxr.py](https://storage.googleapis.com/misc_jb/make-interpret-mimic-cxr.py)
+   utilizing the [make-interpret-mimic-cxr.py](https://storage.googleapis.com/vilmedic_dataset/RRG24/make-interpret-mimic-cxr.py)
    script.
    It's crucial to use this script as it ensures the proper splits are defined. Please have the following structure
    ready (files folder is from [mimic-cxr-jpg](https://physionet.org/content/mimic-cxr-jpg/2.0.0/)):
