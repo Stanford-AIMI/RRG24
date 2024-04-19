@@ -1,5 +1,7 @@
-> [!NOTE]  
-> Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)
+
+> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
+> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
+> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
 
 # Shared task on Large-Scale Radiology Report Generation
 
