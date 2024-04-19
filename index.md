@@ -1,3 +1,6 @@
+> [!NOTE]  
+> Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)
+
 # Shared task on Large-Scale Radiology Report Generation
 
 An important medical application of natural language generation (NLG) is to build assistive systems that take X-ray
@@ -33,8 +36,8 @@ the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing 
 ## 1.2 Timeline
 
 - **Release of the training and validation datasets:** February 22nd (Tuesday), 2024
-- **Release of the public and hidden test dataset:** April 12th (Friday), 2024
-- **System submission deadline:** May 10th (Friday), 2024
+- **Release of the public and hidden test dataset:** April 19th (Friday), 2024
+- **System submission deadline:** May 15th (Friday), 2024
 - **System papers due date:** May 17th (Friday), 2024
 - **Notification of acceptance:** June 17th (Monday), 2024
 - **Camera-ready system papers due:** July 1st (Monday), 2024
@@ -76,8 +79,7 @@ Below are the data used for the challenge. Please note:
 
 ### 2.3 Test
 
-The ground-truth of the test-set will be provided at the end of the challenge. There will be one test-set for
-impressions, and one test-set for findings.
+Please see [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-public/discussions](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-public/discussions)
 
 ### 2.4 Access
 
