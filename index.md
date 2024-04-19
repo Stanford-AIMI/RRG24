@@ -39,7 +39,7 @@ the [Proceedings of the 23rd Workshop on Biomedical Natural Language Processing 
 
 - **Release of the training and validation datasets:** February 22nd (Tuesday), 2024
 - **Release of the public and hidden test dataset:** April 19th (Friday), 2024
-- **System submission deadline:** May 15th (Friday), 2024
+- **System submission deadline:** May 15th (Wednesday), 2024
 - **System papers due date:** May 17th (Friday), 2024
 - **Notification of acceptance:** June 17th (Monday), 2024
 - **Camera-ready system papers due:** July 1st (Monday), 2024
