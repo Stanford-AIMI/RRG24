@@ -1,9 +1,95 @@
+## 0. Paper submission
 
-> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
-> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
-> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
+**In response to multiple requests, the leaderboard will remain open until the very end. Please ensure that the results in your overview paper match your submission on the online leaderboard.**
+
+> System papers due date: May 17th (Friday), 2024
+
+All papers will be submitted at:
+> https://softconf.com/acl2024/BioNLP2024-ST
+
+In the submission form, choose:
+> Submission Categories: Please enter the categories under which the submission should be reviewed.
+> Task (*):   
+> ST_1A
+
+Your paper should respect the format:
+> TeamA at RRG24: Title
+> 
+
+Please follow these instructions:
+
+- We do not run a double blinded review. **Your paper must not be anonymous.**
+- Send a one-paragraph summary to jbdel [at] stanford dot edu about your best system, as well as your paper name, so it can be included in the overview paper.
+- Make sure the following metrics are reported and correctly cited:
+  - BLEU4
+```bibtex
+@inproceedings{papineni2002bleu,
+  title={Bleu: a method for automatic evaluation of machine translation},
+  author={Papineni, Kishore and Roukos, Salim and Ward, Todd and Zhu, Wei-Jing},
+  booktitle={Proceedings of the 40th annual meeting of the Association for Computational Linguistics},
+  pages={311--318},
+  year={2002}
+}
+```
+  - ROUGEL
+```bibtex
+@inproceedings{lin2004rouge,
+  title={Rouge: A package for automatic evaluation of summaries},
+  author={Lin, Chin-Yew},
+  booktitle={Text summarization branches out},
+  pages={74--81},
+  year={2004}
+}
+```
+  - Bertscore
+```bibtex
+@inproceedings{zhang2019bertscore,
+  title={BERTScore: Evaluating Text Generation with BERT},
+  author={Zhang, Tianyi and Kishore, Varsha and Wu, Felix and Weinberger, Kilian Q and Artzi, Yoav},
+  booktitle={International Conference on Learning Representations},
+  year={2019}
+}
+```
+  - F1-cheXbert	
+```bibtex
+@inproceedings{smit2020combining,
+  title={Combining Automatic Labelers and Expert Annotations for Accurate Radiology Report Labeling Using BERT},
+  author={Smit, Akshay and Jain, Saahil and Rajpurkar, Pranav and Pareek, Anuj and Ng, Andrew Y and Lungren, Matthew},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages={1500--1519},
+  year={2020}
+}
+```
+  - F1-RadGraph	
+```bibtex
+@inproceedings{delbrouck2022improving,
+  title={Improving the Factual Correctness of Radiology Report Generation with Semantic Rewards},
+  author={Delbrouck, Jean-Benoit and Chambon, Pierre and Bluethgen, Christian and Tsai, Emily and Almusa, Omar and Langlotz, Curtis},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2022},
+  pages={4348--4360},
+  year={2022}
+}
+```
+
+The metrics packages and the leaderboard that made this challenge possible were provided thanks to ViLMedic. Please include it in your submission:
+```bibtex
+@inproceedings{delbrouck2022vilmedic,
+  title={ViLMedic: a framework for research at the intersection of vision and language in medical AI},
+  author={Delbrouck, Jean-benoit and Saab, Khaled and Varma, Maya and Eyuboglu, Sabri and Chambon, Pierre and Dunnmon, Jared and Zambrano, Juan and Chaudhari, Akshay and Langlotz, Curtis},
+  booktitle={Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics: System Demonstrations},
+  pages={23--34},
+  year={2022}
+}
+```
+
+
+
 
 # Shared task on Large-Scale Radiology Report Generation
+
+> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
+> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
+> <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
 
 An important medical application of natural language generation (NLG) is to build assistive systems that take X-ray
 images of a patient and generate a textual report describing clinical observations in the images. This is a clinically
