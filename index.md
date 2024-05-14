@@ -44,7 +44,7 @@ Please read these instructions:
     publisher = "Association for Computational Linguistics",
 }
 ```
-**2) The metrics**
+**2) The metrics:**
   - BLEU4
 ```bibtex
 @inproceedings{papineni2002bleu,
@@ -94,7 +94,7 @@ Please read these instructions:
   year={2022}
 }
 ```
-**3) The datasets**
+**3) The datasets:**
   - Mimic-cxr
 ```bibtex
 @article{johnson2019mimic,
