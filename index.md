@@ -18,9 +18,11 @@ Your paper should respect the format:
 > TeamA at RRG24: Title
 > 
 
-Please follow these instructions:
+Please read these instructions:
 
 - We do not run a double blinded review. **Your paper must not be anonymous.**
+- You can choose to submit a short (4 pages) or a long paper (8 pages).
+- The shared task paper will undergo a "light" review process, focusing on aspects such as understandability, articulation, formatting, and overall style.
 - Send a one-paragraph summary to jbdel [at] stanford dot edu about your best system, as well as your paper name, so it can be included in the overview paper.
 - Make sure the following metrics are reported and correctly cited:
   - BLEU4
