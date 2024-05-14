@@ -1,3 +1,5 @@
+# Shared task on Large-Scale Radiology Report Generation
+
 ## 0. Paper submission
 
 **In response to multiple requests, the leaderboard will remain open until the very end. Please ensure that the results in your overview paper match your submission on the online leaderboard.**
@@ -81,11 +83,9 @@ The metrics packages and the leaderboard that made this challenge possible were 
   year={2022}
 }
 ```
+<hr/>
 
 
-
-
-# Shared task on Large-Scale Radiology Report Generation
 
 > <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
 > <b>Submission are now open at [https://vilmedic.app/misc/bionlp24/leaderboard](https://vilmedic.app/misc/bionlp24/leaderboard)</b>
