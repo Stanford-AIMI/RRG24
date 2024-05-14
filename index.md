@@ -24,8 +24,9 @@ Please read these instructions:
 - You can choose to submit a short (4 pages) or a long paper (8 pages).
 - The shared task paper will undergo a "light" review process, focusing on aspects such as understandability, articulation, formatting, and overall style.
 - Send a one-paragraph summary to jbdel [at] stanford dot edu about your best system, as well as your paper name, so it can be included in the overview paper.
-- Make sure your paper contains the proper reference to 
-1) The overview paper:
+- Make sure your paper contains the proper reference to:
+- 
+**1) The overview paper:**
 ```bibtex
 @inproceedings{xu-etal-2024-overview,
     title = "Overview of the First Shared Task on Clinical Text Generation: RRG24 and {``}Discharge Me!{''}",
@@ -43,7 +44,7 @@ Please read these instructions:
     publisher = "Association for Computational Linguistics",
 }
 ```
-2) The metrics
+**2) The metrics**
   - BLEU4
 ```bibtex
 @inproceedings{papineni2002bleu,
@@ -93,8 +94,8 @@ Please read these instructions:
   year={2022}
 }
 ```
-3) The datasets
-- Mimic-cxr
+**3) The datasets**
+  - Mimic-cxr
 ```bibtex
 @article{johnson2019mimic,
   title={MIMIC-CXR, a de-identified publicly available database of chest radiographs with free-text reports},
@@ -107,7 +108,7 @@ Please read these instructions:
   publisher={Nature Publishing Group UK London}
 } 
 ```
-- Chexpert
+  - Chexpert
 ```bibtex
 @article{chambon2024chexpert,
   title={CheXpert Plus: Hundreds of Thousands of Aligned Radiology Texts, Images and Patients},
@@ -116,7 +117,7 @@ Please read these instructions:
 }
 
 ```
-- Padchest
+  - Padchest
 ```bibtex
 @article{bustos2020padchest,
   title={Padchest: A large chest x-ray image dataset with multi-label annotated reports},
@@ -128,7 +129,7 @@ Please read these instructions:
   publisher={Elsevier}
 }
 ```
-- BIMCV COVID-19
+  - BIMCV COVID-19
 ```bibtex
 @article{vaya2020bimcv,
   title={BIMCV COVID-19+: a large annotated dataset of RX and CT images from COVID-19 patients},
@@ -137,7 +138,7 @@ Please read these instructions:
   year={2020}
 }
 ```
-4) The metrics packages and the leaderboard that made this challenge possible were provided thanks to ViLMedic. Please include it in your submission:
+**4) The metric packages and the leaderboard that made this challenge possible were provided thanks to ViLMedic. Please include it in your submission:**
 ```bibtex
 @inproceedings{delbrouck2022vilmedic,
   title={ViLMedic: a framework for research at the intersection of vision and language in medical AI},
