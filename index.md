@@ -108,14 +108,13 @@ Please read these instructions:
   publisher={Nature Publishing Group UK London}
 } 
 ```
-  - Chexpert
+  - CheXpert
 ```bibtex
 @article{chambon2024chexpert,
   title={CheXpert Plus: Hundreds of Thousands of Aligned Radiology Texts, Images and Patients},
   author={Chambon, Pierre and Delbrouck, Jean-Benoit and Sounack, Thomas and Huang, Shih-Cheng and Chen, Zhihong and Varma, Maya and Truong, Steven QH and Chuong, Chu The and Langlotz, Curtis P.},
   year={2024}
 }
-
 ```
   - Padchest
 ```bibtex
