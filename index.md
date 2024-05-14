@@ -24,7 +24,26 @@ Please read these instructions:
 - You can choose to submit a short (4 pages) or a long paper (8 pages).
 - The shared task paper will undergo a "light" review process, focusing on aspects such as understandability, articulation, formatting, and overall style.
 - Send a one-paragraph summary to jbdel [at] stanford dot edu about your best system, as well as your paper name, so it can be included in the overview paper.
-- Make sure the following metrics are reported and correctly cited:
+- Make sure your paper contains the proper reference to 
+1) The overview paper:
+```bibtex
+@inproceedings{xu-etal-2024-overview,
+    title = "Overview of the First Shared Task on Clinical Text Generation: RRG24 and {``}Discharge Me!{''}",
+    author = "Xu, Justin  and
+      Chen, Zhihong  and
+      Johnston, Andrew  and
+      Blankemeier, Louis  and
+      Varma, Maya  and
+      Langlotz, Curtis  and
+      Delbrouck, Jean-Benoit",
+    booktitle = "The 23rd Workshop on Biomedical Natural Language Processing and BioNLP Shared Tasks",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+}
+```
+2) The metrics
   - BLEU4
 ```bibtex
 @inproceedings{papineni2002bleu,
@@ -74,8 +93,51 @@ Please read these instructions:
   year={2022}
 }
 ```
+3) The datasets
+- Mimic-cxr
+```bibtex
+@article{johnson2019mimic,
+  title={MIMIC-CXR, a de-identified publicly available database of chest radiographs with free-text reports},
+  author={Johnson, Alistair EW and Pollard, Tom J and Berkowitz, Seth J and Greenbaum, Nathaniel R and Lungren, Matthew P and Deng, Chih-ying and Mark, Roger G and Horng, Steven},
+  journal={Scientific data},
+  volume={6},
+  number={1},
+  pages={317},
+  year={2019},
+  publisher={Nature Publishing Group UK London}
+} 
+```
+- Chexpert
+```bibtex
+@article{chambon2024chexpert,
+  title={CheXpert Plus: Hundreds of Thousands of Aligned Radiology Texts, Images and Patients},
+  author={Chambon, Pierre and Delbrouck, Jean-Benoit and Sounack, Thomas and Huang, Shih-Cheng and Chen, Zhihong and Varma, Maya and Truong, Steven QH and Chuong, Chu The and Langlotz, Curtis P.},
+  year={2024}
+}
 
-The metrics packages and the leaderboard that made this challenge possible were provided thanks to ViLMedic. Please include it in your submission:
+```
+- Padchest
+```bibtex
+@article{bustos2020padchest,
+  title={Padchest: A large chest x-ray image dataset with multi-label annotated reports},
+  author={Bustos, Aurelia and Pertusa, Antonio and Salinas, Jose-Maria and De La Iglesia-Vaya, Maria},
+  journal={Medical image analysis},
+  volume={66},
+  pages={101797},
+  year={2020},
+  publisher={Elsevier}
+}
+```
+- BIMCV COVID-19
+```bibtex
+@article{vaya2020bimcv,
+  title={BIMCV COVID-19+: a large annotated dataset of RX and CT images from COVID-19 patients},
+  author={Vay{\'a}, Maria De La Iglesia and Saborit, Jose Manuel and Montell, Joaquim Angel and Pertusa, Antonio and Bustos, Aurelia and Cazorla, Miguel and Galant, Joaquin and Barber, Xavier and Orozco-Beltr{\'a}n, Domingo and Garc{\'\i}a-Garc{\'\i}a, Francisco and others},
+  journal={arXiv preprint arXiv:2006.01174},
+  year={2020}
+}
+```
+4) The metrics packages and the leaderboard that made this challenge possible were provided thanks to ViLMedic. Please include it in your submission:
 ```bibtex
 @inproceedings{delbrouck2022vilmedic,
   title={ViLMedic: a framework for research at the intersection of vision and language in medical AI},
