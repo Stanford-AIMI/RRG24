@@ -231,7 +231,7 @@ Below are the data used for the challenge. Please note:
 
 ### 2.3 Test
 
-Please see [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-public/discussions](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-public/discussions)
+Please see [https://huggingface.co/datasets/StanfordAIMI/rrg24-shared-task-bionlp/discussions](https://huggingface.co/datasets/StanfordAIMI/rrg24-shared-task-bionlp/discussions)
 
 ### 2.4 Access
 
@@ -242,7 +242,7 @@ Here are the steps to access the dataset of this challenge with the correct spli
    the <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="15"> huggingface dataset at
    the
    following
-   url: [https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-public](https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-public).
+   url: [https://huggingface.co/datasets/StanfordAIMI/rrg24-shared-task-bionlp](https://huggingface.co/datasets/StanfordAIMI/rrg24-shared-task-bionlp).
    Once you have been granted access, you can invoke the dataset using the following:
 
 ```python
