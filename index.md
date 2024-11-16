@@ -332,7 +332,7 @@ Also, the top participants will be evaluated against CheXagent [5].
       <a href="https://jbdel.github.io/">Jean-Benoit Delbrouck</a>
     </td>
     <td style="border: none;" align="center">
-      <img src="https://pbs.twimg.com/profile_images/1732290523657076736/fixg-DOd_400x400.jpg" alt="Zhihong Chen" style="border-radius: 50%; width: 160px;"><br>
+      <img src="https://zhjohnchan.github.io/src/square_3594.jpg" alt="Zhihong Chen" style="border-radius: 50%; width: 160px;"><br>
       <a href="https://zhjohnchan.github.io/">Zhihong Chen</a>
     </td>
     <td style="border: none;" align="center">
